@@ -10,7 +10,9 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: #111827;
-  background: #ffffff;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.68)),
+    url('media/hero.jpg') center / cover fixed no-repeat;
   line-height: 1.6;
 }
 
@@ -27,9 +29,9 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: rgba(255,255,255,0.96);
-  border-bottom: 1px solid #e5e7eb;
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.88);
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(14px);
 }
 
 .brand {
@@ -78,7 +80,7 @@ img {
   padding: 0.75rem;
   border: 1px solid #e5e7eb;
   border-radius: 1rem;
-  background: #fff;
+  background: rgba(255,255,255,0.96);
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   display: none;
 }
@@ -88,16 +90,12 @@ img {
 }
 
 .hero {
-  position: relative;
   min-height: 72vh;
   display: grid;
   place-items: center;
   padding: 7rem 1.5rem 5rem;
   text-align: center;
   color: #fff;
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.58), rgba(15, 23, 42, 0.58)),
-    url('media/hero.jpg') center / cover no-repeat;
 }
 
 .hero-inner,
@@ -165,8 +163,13 @@ h1 {
   padding: 5rem 1.5rem;
 }
 
-.courses {
-  background: #f9fafb;
+.section-inner {
+  padding: 2.5rem;
+  border-radius: 1.75rem;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.18);
+  backdrop-filter: blur(12px);
 }
 
 .course-card {
@@ -176,7 +179,7 @@ h1 {
   gap: 2rem;
   padding: 2rem;
   border-radius: 1.5rem;
-  background: #fff;
+  background: rgba(255,255,255,0.86);
   border: 1px solid #e5e7eb;
 }
 
@@ -209,11 +212,14 @@ h1 {
 .site-footer {
   padding: 2rem;
   text-align: center;
-  border-top: 1px solid #e5e7eb;
-  color: #6b7280;
+  color: rgba(255,255,255,0.8);
 }
 
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
   .site-header,
   .site-nav,
   .course-card {
@@ -224,5 +230,9 @@ h1 {
   .hero {
     min-height: 64vh;
     padding-top: 5rem;
+  }
+
+  .section-inner {
+    padding: 1.5rem;
   }
 }
